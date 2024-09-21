@@ -1,0 +1,19 @@
+{% extends 'layouts/ml_app.html' %}
+
+{% block content %}
+
+<form class="myform" action="/" method="POST">
+    <h3> Fasting Sugar: </h3> 
+    <input type="number" name="Fasting Sugar"/>
+    <h3> Frequent Urination: </h3> 
+    <input type="number" name="Frequent Urination"/>
+    <button class="btn #42a5f5 blue lighten-1" type="submit">Submit</button>
+    
+    {% if data %}
+    <h4 style="color:{{ data[1] }}">
+        {{ data[0] }}
+    </h4>
+    {% endif %}
+</form>
+
+{% endblock %}
